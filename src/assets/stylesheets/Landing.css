@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Lment';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Lment/Lment-v02.otf' ) format('opentype'); 
+  }
+
+  .title {
+    text-align: center;
+    font-family: 'Lment';
+    font-size: 5em;
+  }
