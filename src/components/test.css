@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  background-color: #000;
+}
+.test
+{
+  -webkit-transition:all 1s;
+  -moz-transition:all 1s;
+  -o-transition:all 1s;
+  -ms-transition:all 1s;
+}
+
+
+.controls {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  margin: 1.25rem 0;
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+.controls > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  height: 2rem;
+  width: 6rem;
+  background: #ff5533;
+  color: #fff;
+  border-radius: 5%;
+  border: 0;
+}
+.controls > button:first-child {
+  margin-right: 0.25rem;
+}

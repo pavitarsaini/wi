@@ -6,48 +6,80 @@ import {
   Geography
 } from "react-simple-maps";
 import { Spring, config } from 'react-spring/renderprops';
+import { useTransition, animated } from "react-spring";
+import "./test.css"
+const geoPaths = ["./mapdata/world.json", "./mapdata/kenya.json"];
 
-const geoPaths = ["/world.json", "/ch.json"];
+const highlighted = [
+  "KEN",
+  "CAN"
+];
 
 class MapChart extends Component {
-  state = {
+  constructor() {
+    super();
+  this.state = {
     detail: false,
     paths: geoPaths[0],
     center: [0, 0],
-    zoom: 1
+    zoom: 1,
+    bypass: false,
   };
-  switchPaths = (a, b, c) => {
+  this.changeCenter = this.changeCenter.bind(this)
+    this.handleMoveEnd = this.handleMoveEnd.bind(this)
+}  
+
+  handleGeographyClick = (geography, projection, path) => event => {
+
+    const centroid = projection.invert(path.centroid(geography));
+
     const { detail } = this.state;
     this.setState({
       paths: detail ? geoPaths[0] : geoPaths[1],
-      center: detail ? [0, 0] : [8, 47],
+      center: detail ? [0, 0] : centroid,
       zoom: detail ? 1 : 10,
       detail: !detail
     });
+    console.log(geography)
   };
+
+  changeCenter = (center) => () => {
+    this.setState({ center })
+  }
+
+  handleMoveEnd(newCenter) {
+    console.log(newCenter)
+    this.setState({ 
+                    center: newCenter.coordinates,
+                    zoom: newCenter.zoom
+                  })    
+  }
 
   render() {
     return (
       <div>
-        <Spring
-          from={{ zoom: 1 }}
-          to={{ zoom: this.state.zoom }}
-          config={config.gentle}
-        >
-          {(styles) => (
-            <ComposableMap style={{ width: "100%", height: "auto" }}>
-              <ZoomableGroup center={this.state.center} zoom={styles.zoom}>
+        
+  
+          
+            <div>
+            <ComposableMap style={{ width: "100%", height: "100%" }} >
+              <ZoomableGroup 
+            onMoveEnd={this.handleMoveEnd} className={"test"} center={this.state.center} zoom={this.state.zoom}>
                 <Geographies geography={this.state.paths}>
-                  {({ geographies, proj }) =>
-                    geographies.map((geo, i) => (
+                  {({ geographies, projection, path }) =>
+                  
+                    geographies.map((geo, i) => {
+                      const isHighlighted =
+                      highlighted.indexOf(geo.properties.ISO3) !== -1;
+                      return (
                       <Geography
                         key={geo.rsmKey}
                         geography={geo}
-                        projection={proj}
-                        onClick={this.switchPaths}
+                        projection={projection}
+                        onClick={this.handleGeographyClick(geo, projection, path)}
+                        fill={isHighlighted ? "#82FF9E" : "#fff"}
                         style={{
                           default: {
-                            fill: "#D6D6DA",
                             outline: "none"
                           },
                           hover: {
@@ -60,13 +92,21 @@ class MapChart extends Component {
                           }
                         }}
                       />
-                    ))
+                      );
+                      })
                   }
                 </Geographies>
               </ZoomableGroup>
+              
             </ComposableMap>
-          )}
-        </Spring>
+            <div className="controls">
+            <button className="btn" onClick={this.changeCenter([0, 0])}>
+              Center
+            </button>
+          </div>
+          </div>
+         
+        
       </div>
     );
   }
