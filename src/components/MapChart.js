@@ -13,18 +13,19 @@ import IDNIntro from "./MapCountries/IDNIntro"
 
 const ZOOM = 0.85;
 const CENTER = [13, -33]; 
-const geoPaths = ["./mapdata/world.json", "./mapdata/kenya.json", "./mapdata/idn.json"];
+const geoPaths = ["./mapdata/world.json", "./mapdata/kenya.json", "./mapdata/idn.json", "./mapdata/cali.json"];
 
 var countriesList = [
   { name: 'KEN', center: [48.084867983159704, -3.282589099070572], zoom: 8, path: geoPaths[1] },
   { name: 'IDN', center: [151.25483468761988, -15.26125385186716], zoom: 2.378414230005443, path: geoPaths[2] },
-  { name: '14/1/2011', reading: 6, id: 45652 }
+  { name: 'USA', center: [-105.66381951282006, 33.150487064940826], zoom: 8, path: geoPaths[3] }
 ];
 
 const highlighted = [
   "KEN",
   "CAN",
-  "IDN"
+  "IDN",
+  "USA"
 ];
 
 class MapChart extends Component {
@@ -103,6 +104,7 @@ getCountryInfo(uid) {
                             outline: "none"
                           },
                           hover: {
+                            //opacity:0.8,
                             fill: "#F53",
                             outline: "none"
                           },

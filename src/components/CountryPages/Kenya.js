@@ -12,9 +12,12 @@ class Kenya extends Component {
 
   render() {
     return (
-      <div className="loading2 wave2">
-  Loading
-</div>
+      <h1>
+         
+        <span class="fire">W</span>
+        <span class="burn">I</span>
+        <span class="burn">I</span>
+        <span class="fire">D</span></h1>
     );
   }
 }
