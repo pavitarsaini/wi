@@ -8,21 +8,23 @@ import {
 import { useTransition, useTrail, animated as a } from "react-spring";
 import "../assets/stylesheets/MapChart/MapChart.css"
 
-import Kenya from "./Countries/Kenya"
+import KanyaIntro from "./MapCountries/KenyaIntro"
+import IDNIntro from "./MapCountries/IDNIntro"
 
 const ZOOM = 0.85;
 const CENTER = [13, -33]; 
-const geoPaths = ["./mapdata/world.json", "./mapdata/kenya.json"];
+const geoPaths = ["./mapdata/world.json", "./mapdata/kenya.json", "./mapdata/idn.json"];
 
 var countriesList = [
   { name: 'KEN', center: [48.084867983159704, -3.282589099070572], zoom: 8, path: geoPaths[1] },
-  { name: '13/1/2011', reading: 5, id: 20053 },
+  { name: 'IDN', center: [151.25483468761988, -15.26125385186716], zoom: 2.378414230005443, path: geoPaths[2] },
   { name: '14/1/2011', reading: 6, id: 45652 }
 ];
 
 const highlighted = [
   "KEN",
-  "CAN"
+  "CAN",
+  "IDN"
 ];
 
 class MapChart extends Component {
@@ -46,7 +48,7 @@ getCountryInfo(uid) {
 
     if(countries.length > 0) {
         return countries[0];
-    }else return { center: [0, 0], zoom: 1, paths: geoPaths[0]}
+    }else return { center: CENTER, zoom: ZOOM, paths: geoPaths[0]}
 }
 
   handleGeographyClick = (geography, projection, path) => event => {
@@ -124,8 +126,15 @@ getCountryInfo(uid) {
               Center
             </button>
           </div>
-          || <div className="controls2"><Kenya data={this.state}/></div>
-     }
+          }
+          {
+       this.state.paths == geoPaths[1] &&
+           <div className="controls2"><KanyaIntro data={this.state}/></div>
+          }
+          {
+       this.state.paths == geoPaths[2] &&
+           <div className="controls2"><IDNIntro data={this.state}/></div>
+          }
       </div>
     );
   }

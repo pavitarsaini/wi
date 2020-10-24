@@ -14,60 +14,115 @@
 }
 
 .trails-main {
-  position: relative;
-  width: 120%;
+  top: 7%;
+  left: 40%;
+  width: 50%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  white-space: nowrap;
+  text-align: center;
+  position: fixed;
+}
+
+.trails-main:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 0%;
+  margin-right: -.25em;
+  height: 100%;
 }
 
 .trails-text {
-  font-family: "Lment";
-  position: relative;
-  width: 100%;
-  height: 80px;
-  line-height: 80px;
-  color: rgb(255, 255, 255);
-  font-size: 10.3em;
-  font-weight: 400;
-  text-transform: uppercase;
-  will-change: transform, opacity;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
 }
 
-.trails-text2 {
-  font-family: "Grotesk";
-  line-height: 100px;
-  color: rgb(255, 255, 255);
-  font-size: 6em;
-  font-weight: 400;
-  text-transform: uppercase;
-  will-change: transform, opacity;
-}
-
-.trails-text > div {
-  overflow: hidden;
-}
-
-.cont {
-  height: 100%;
-}
-
-.travel{
-  outline: none;
+.travel {
   font-family: "Lack";
-  text-align: center;
-  margin-top: 5%;
-  width: 95%;
-  height: 40px;
-  line-height: 100%;
+  text-decoration: none;
+
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+
+  right: 5%;
+  bottom: 35%;
+  width: 92%;
+  height: 5%;
+
+
   border: 1px solid #fff;
   border-radius: 15px;
-  background-color: white;
+  color: white;
+  background-color: transparent;
   transition: 0.3s;
+  
 }
 
 .travel:hover {
-  background-color: #000;
-  color: white;
+  background-color: white;
+  color: black;
+}
+
+.fadeIn {
+  animation: fadeIn ease 5s;
+  -webkit-animation: fadeIn ease 5s;
+}
+
+.fadeInSlow {
+  animation: fadeIn ease 20s;
+  -webkit-animation: fadeIn ease 20s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }

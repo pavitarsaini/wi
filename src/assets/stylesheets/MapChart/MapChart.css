@@ -38,15 +38,6 @@ body {
   transform: translateX(-50%);
 }
 
-.controls2 {
-  position: fixed;
-  top: 50%;
-  left: 40%;
-  text-align: center;
-  transform: translateX(-50%);
-  transform: translateY(-50%);
-}
-
 .controls > button {
   display: flex;
   justify-content: center;
