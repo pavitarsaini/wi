@@ -1,0 +1,59 @@
+@font-face {
+    font-family: "Grotesk";
+    src: url("../../fonts/Grotesk/Grotesk.otf");
+  }
+  
+.test {
+    position: absolute;
+    left: 35%;
+    right: 0;
+    top: 5%;
+    bottom: 0;
+    display: block;
+  }
+
+  .help{
+      color: white;
+    font-family: "Grotesk";
+    text-decoration: none;
+    
+    font-size: 7.4em;
+  
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+  
+    left: 37%;
+    right: 0;
+    bottom: 60%;
+    width: 44%;
+    height: 5%;
+
+  }
+
+  .CALItravel{
+    font-family: "Lack";
+    text-decoration: none;
+  
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+  
+    right: 8%;
+    bottom: 31%;
+    width: 53%;
+    height: 5%;
+  
+  
+    border: 1px solid #fff;
+    border-radius: 15px;
+    color: white;
+    background-color: transparent;
+    transition: 0.3s;
+  }

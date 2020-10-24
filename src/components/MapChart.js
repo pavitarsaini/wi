@@ -10,6 +10,7 @@ import "../assets/stylesheets/MapChart/MapChart.css"
 
 import KanyaIntro from "./MapCountries/KenyaIntro"
 import IDNIntro from "./MapCountries/IDNIntro"
+import CaliIntro from "./MapCountries/CaliIntro"
 
 const ZOOM = 0.85;
 const CENTER = [13, -33]; 
@@ -136,6 +137,10 @@ getCountryInfo(uid) {
           {
        this.state.paths == geoPaths[2] &&
            <div className="controls2"><IDNIntro data={this.state}/></div>
+          }
+          {
+       this.state.paths == geoPaths[3] &&
+           <div className="controls2"><CaliIntro data={this.state}/></div>
           }
       </div>
     );

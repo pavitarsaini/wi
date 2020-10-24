@@ -14,10 +14,7 @@ class Kenya extends Component {
     return (
       <h1>
          
-        <span class="fire">W</span>
-        <span class="burn">I</span>
-        <span class="burn">I</span>
-        <span class="fire">D</span></h1>
+        </h1>
     );
   }
 }
