@@ -2,6 +2,25 @@
     font-family: "Grotesk";
     src: url("../../fonts/Grotesk/Grotesk.otf");
   }
+
+  @media screen and (max-width: 1600px) {
+    .IDNtravel{
+      right: 8%;
+  bottom: 31%;
+  width: 44%;
+  height: 5%;
+    }
+}
+
+/* For Tablets */
+@media screen and (min-width: 1800px) {
+  .IDNtravel{
+    right: 12%;
+  bottom: 31%;
+  width: 35%;
+  height: 5%;
+  }
+}
   
   .tittle {
     color: white;
@@ -68,12 +87,6 @@ body {
   align-content: center;
   flex-direction: column;
   text-align: center;
-
-  right: 8%;
-  bottom: 31%;
-  width: 44%;
-  height: 5%;
-
 
   border: 1px solid #fff;
   border-radius: 15px;

@@ -3,11 +3,39 @@
     src: url("../../fonts/Grotesk/Grotesk.otf");
   }
   
-.test {
+
+  @media screen and (max-width: 1600px) {
+    .video{
+      top: 5%;
+    }
+
+    .CALItravel{
+      right: 8%;
+    bottom: 31%;
+    width: 52%;
+    height: 5%;
+    }
+}
+
+/* For Tablets */
+@media screen and (min-width: 1800px) {
+  .video {
+    top: 13%;
+    width: 50%;
+    }
+
+    .CALItravel{
+      right: 17%;
+      bottom: 31%;
+      width: 44%;
+      height: 5%;
+    }
+}
+
+.video {
     position: absolute;
     left: 35%;
     right: 0;
-    top: 15%;
     bottom: 0;
     display: block;
   }
@@ -45,10 +73,7 @@
     flex-direction: column;
     text-align: center;
   
-    right: 17%;
-    bottom: 31%;
-    width: 45%;
-    height: 5%;
+    
   
   
     border: 1px solid #fff;
@@ -57,3 +82,9 @@
     background-color: transparent;
     transition: 0.3s;
   }
+
+  .CALItravel:hover {
+    background-color: white;
+    color: black;
+  }
+  

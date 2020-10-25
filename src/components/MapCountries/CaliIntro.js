@@ -20,8 +20,8 @@ class CaliIntro extends Component {
       <div>
         
       
-      <video  className="test" id="my-video" autoPlay>
-  <source src="./video/fire.mp4" type="video/mp4"/>
+      <video  className="video" id="my-video" autoPlay>
+  <source src="./video/fire.webm" type="video/webm"/>
   Your browser does not support the video tag.
 </video>
 
