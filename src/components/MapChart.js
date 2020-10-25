@@ -44,6 +44,10 @@ class MapChart extends Component {
     this.handleMoveEnd = this.handleMoveEnd.bind(this)
 }  
 
+componentDidMount () {
+  document.body.id = 'MAIN';
+}
+
 getCountryInfo(uid) {
     var countries = countriesList.filter(function(country) {
         return country.name === uid;});
@@ -82,7 +86,7 @@ getCountryInfo(uid) {
 
   render() {
     return (
-      <div>
+      <div className="MAIN">
             <ComposableMap style={{ width: "100%", height: "100%" }} >
               <ZoomableGroup 
             onMoveEnd={this.handleMoveEnd} className={"test"} center={this.state.center} zoom={this.state.zoom}>

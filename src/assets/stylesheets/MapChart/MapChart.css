@@ -1,6 +1,5 @@
 html,
 body {
-  overflow: hidden;
   width: 100%;
   height: 100%;
   margin: 0;
@@ -18,6 +17,10 @@ body {
 #root {
   width: 100%;
   height: 100%;
+}
+
+#MAIN{
+  overflow: hidden;
 }
 
 .test
@@ -55,3 +58,4 @@ body {
 .controls > button:first-child {
   margin-right: 0.25rem;
 }
+

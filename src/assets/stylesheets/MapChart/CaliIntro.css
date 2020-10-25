@@ -7,13 +7,13 @@
     position: absolute;
     left: 35%;
     right: 0;
-    top: 5%;
+    top: 15%;
     bottom: 0;
     display: block;
   }
 
   .help{
-      color: white;
+    color: white;
     font-family: "Grotesk";
     text-decoration: none;
     
@@ -45,9 +45,9 @@
     flex-direction: column;
     text-align: center;
   
-    right: 8%;
+    right: 17%;
     bottom: 31%;
-    width: 53%;
+    width: 45%;
     height: 5%;
   
   

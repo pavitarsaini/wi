@@ -19,14 +19,12 @@ class CaliIntro extends Component {
     return (
       <div>
         
-      <div className="test">
       
-      <video id="my-video" autoPlay>
+      <video  className="test" id="my-video" autoPlay>
   <source src="./video/fire.mp4" type="video/mp4"/>
   Your browser does not support the video tag.
 </video>
 
-</div>
 <div className="help fadeIn">CALIFORINA</div>
 <Link to='/idn' className="CALItravel fadeInSlow">travel</Link>
 </div>
