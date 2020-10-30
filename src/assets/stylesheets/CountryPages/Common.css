@@ -32,6 +32,5 @@
 }
 
 #paragraph a{
-    background: linear-gradient(180deg, rgba(255,255,255,0) 65%, red 65%);
     border-bottom: none !important;
   }

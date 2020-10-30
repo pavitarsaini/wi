@@ -1,128 +1,127 @@
 @font-face {
-  font-family: "Lment";
-  src: url("../../fonts/Lment/Lment-v02.otf");
+    font-family: "Lment";
+    src: url("../../fonts/Lment/Lment-v02.otf");
 }
-
 @font-face {
-  font-family: "Grotesk";
-  src: url("../../fonts/Grotesk/Grotesk.otf");
+    font-family: "Grotesk";
+    src: url("../../fonts/Grotesk/Grotesk.otf");
 }
-
 @font-face {
-  font-family: "Lack";
-  src: url("../../fonts/Lack/Lack-Regular.otf");
+    font-family: "Lack";
+    src: url("../../fonts/Lack/Lack-Regular.otf");
 }
 
 .trails-main {
-  top: 7%;
-  left: 40%;
-  width: 50%;
-  height: 100%;
-  white-space: nowrap;
-  text-align: center;
-  position: fixed;
+    top: 7%;
+    left: 40%;
+    width: 50%;
+    height: 100%;
+    white-space: nowrap;
+    text-align: center;
+    position: fixed;
 }
-
 .trails-main:before {
-  content: "";
-  display: inline-block;
-  vertical-align: middle;
-  width: 0%;
-  margin-right: -.25em;
-  height: 100%;
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    margin-right: -.25em;
+    height: 100%;
 }
 
 .trails-text {
-  display: inline-block;
-  vertical-align: middle;
-  white-space: normal;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
 }
 
 .travel {
-  font-family: "Lack";
-  text-decoration: none;
+    font-family: "Lack";
+    text-decoration: none;
 
-  display: flex;
-  position: absolute;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 
-  right: 5%;
-  bottom: 35%;
-  width: 92%;
-  height: 5%;
+    right: 5%;
+    bottom: 35%;
+    width: 92%;
+    height: 5%;
 
+    border: 1px solid #fff;
+    border-radius: 15px;
+    color: white;
+    background-color: transparent;
+    transition: 0.3s;
 
-  border: 1px solid #fff;
-  border-radius: 15px;
-  color: white;
-  background-color: transparent;
-  transition: 0.3s;
-  
 }
-
 .travel:hover {
-  background-color: white;
-  color: black;
+    background-color: white;
+    color: black;
 }
 
 .fadeIn {
-  animation: fadeIn ease 5s;
-  -webkit-animation: fadeIn ease 5s;
+    animation: fadeIn ease 5s;
+    -webkit-animation: fadeIn ease 5s;
+}
+
+.fadeInDelay {
+    opacity: 0;
+    animation: fadeIn ease 5s;
+    -webkit-animation: fadeIn ease 5s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+
 }
 
 .fadeInSlow {
-  animation: fadeIn ease 20s;
-  -webkit-animation: fadeIn ease 20s;
+    animation: fadeIn ease 20s;
+    -webkit-animation: fadeIn ease 20s;
 }
-
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
+    0% {
+        opacity: 0;
+    }
 
-  100% {
-    opacity: 1;
-  }
+    100% {
+        opacity: 1;
+    }
 }
-
 @-moz-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
+    0% {
+        opacity: 0;
+    }
 
-  100% {
-    opacity: 1;
-  }
+    100% {
+        opacity: 1;
+    }
 }
-
 @-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
+    0% {
+        opacity: 0;
+    }
 
-  100% {
-    opacity: 1;
-  }
+    100% {
+        opacity: 1;
+    }
 }
-
 @-o-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
+    0% {
+        opacity: 0;
+    }
 
-  100% {
-    opacity: 1;
-  }
+    100% {
+        opacity: 1;
+    }
 }
-
 @-ms-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
+    0% {
+        opacity: 0;
+    }
 
-  100% {
-    opacity: 1;
-  }
+    100% {
+        opacity: 1;
+    }
 }
