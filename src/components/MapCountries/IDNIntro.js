@@ -9,12 +9,12 @@ class IDNIntro extends Component {
     render() {
         return (
             <div>
-                <div className="tittle fadeIn">Jarakrata</div>
+                <div className="tittle fadeIn">Jakarta</div>
                 <div className="loading2 wave2 fadeIn">
                     Sea level rise
 
                 </div>
-                <Link to='/idn' className="IDNtravel fadeInSlow">travel</Link>
+                <Link to='wi/jakarta' className="IDNtravel fadeInSlow">travel</Link>
             </div>
         );
     }

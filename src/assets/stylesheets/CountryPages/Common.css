@@ -9,6 +9,11 @@
   }
 
   @font-face {
+    font-family: "Lack-I";
+    src: url("../../fonts/Lack/Lack-Italic.otf");
+  }
+
+  @font-face {
     font-family: "Commissioner";
     src: url("../../fonts/Commissioner/Commissioner-BoldItalic.otf");
   }
