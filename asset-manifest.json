@@ -1,21 +1,27 @@
 {
   "files": {
-    "main.css": "/wi/static/css/main.20ad7464.chunk.css",
-    "main.js": "/wi/static/js/main.e9252b98.chunk.js",
-    "main.js.map": "/wi/static/js/main.e9252b98.chunk.js.map",
+    "main.css": "/wi/static/css/main.69fb6d34.chunk.css",
+    "main.js": "/wi/static/js/main.0685a4cc.chunk.js",
+    "main.js.map": "/wi/static/js/main.0685a4cc.chunk.js.map",
     "runtime~main.js": "/wi/static/js/runtime~main.232f1821.js",
     "runtime~main.js.map": "/wi/static/js/runtime~main.232f1821.js.map",
     "static/css/2.d48510fc.chunk.css": "/wi/static/css/2.d48510fc.chunk.css",
-    "static/js/2.358d5ace.chunk.js": "/wi/static/js/2.358d5ace.chunk.js",
-    "static/js/2.358d5ace.chunk.js.map": "/wi/static/js/2.358d5ace.chunk.js.map",
+    "static/js/2.a5f34318.chunk.js": "/wi/static/js/2.a5f34318.chunk.js",
+    "static/js/2.a5f34318.chunk.js.map": "/wi/static/js/2.a5f34318.chunk.js.map",
     "index.html": "/wi/index.html",
-    "precache-manifest.c8f899775264f01948008a33e48c210a.js": "/wi/precache-manifest.c8f899775264f01948008a33e48c210a.js",
+    "precache-manifest.04ef4f6abc9c23d0c737ab867a590a31.js": "/wi/precache-manifest.04ef4f6abc9c23d0c737ab867a590a31.js",
     "service-worker.js": "/wi/service-worker.js",
     "static/css/2.d48510fc.chunk.css.map": "/wi/static/css/2.d48510fc.chunk.css.map",
-    "static/css/main.20ad7464.chunk.css.map": "/wi/static/css/main.20ad7464.chunk.css.map",
+    "static/css/main.69fb6d34.chunk.css.map": "/wi/static/css/main.69fb6d34.chunk.css.map",
     "static/media/Common.css": "/wi/static/media/Lack-Regular.1ba028ff.otf",
+    "static/media/CaliIntro.css": "/wi/static/media/Grotesk.c13ab066.otf",
     "static/media/Countries.css": "/wi/static/media/Lment-v02.5910e5a5.otf",
+    "static/media/RIPE.png": "/wi/static/media/RIPE.7a4985ab.png",
+    "static/media/UN.jpg": "/wi/static/media/UN.97bbfb0b.jpg",
     "static/media/drought.jpg": "/wi/static/media/drought.6cd243e9.jpg",
-    "static/media/social.jpg": "/wi/static/media/social.fa879c30.jpg"
+    "static/media/envir.jpg": "/wi/static/media/envir.60301df1.jpg",
+    "static/media/political.jpg": "/wi/static/media/political.e23a6cc1.jpg",
+    "static/media/social.jpg": "/wi/static/media/social.fa879c30.jpg",
+    "static/media/stakeholder.jpg": "/wi/static/media/stakeholder.a30c233d.jpg"
   }
 }
