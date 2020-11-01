@@ -27,7 +27,7 @@ class CaliIntro extends Component {
                 </video>
 
                 <div className="help fadeIn">CALIFORINA</div>
-                <Link to='/idn' className="CALItravel fadeInSlow">travel</Link>
+                <Link to='/wi/califorina' className="CALItravel fadeInSlow">travel</Link>
             </div>
         );
     }
