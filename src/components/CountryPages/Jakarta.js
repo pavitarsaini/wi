@@ -15,6 +15,10 @@ class Jakarta extends Component {
         document.body.id = 'style-2';
     }
 
+    playVideo() {
+        this.refs.vidRef.play();
+      }
+
     render() {
         return (
             <div >
@@ -45,9 +49,14 @@ class Jakarta extends Component {
                     <ReactTooltip id="registerTip" place="right" effect="solid">
                     a gradual settling or sudden sinking of the Earth's surface due to removal or displacement of subsurface earth materials
       </ReactTooltip>
-                    <ScrollAnimation id="stacker" animateOnce animateIn="animate__fadeInUp">
-                        <img id="img-stack" src={require('../../assets/imgs/kenya/drought.jpg')}/>
-                        <figcaption></figcaption>
+                    <ScrollAnimation animateOnce animateIn="animate__fadeInUp">
+                    <video ref="vidRef" loop>
+                    <source src={require('../../assets/videos/sinking.webm')} type="video/webm"/>
+                    Your browser does not support the video tag.
+                </video>
+
+                <button className="play" onClick={this.playVideo.bind(this)}>PLAY</button>
+
                         
                     </ScrollAnimation>
                     </ScrollAnimation>
@@ -88,7 +97,8 @@ class Jakarta extends Component {
 </div>
 
                     <ScrollAnimation animateOnce animateIn="animate__fadeInUp">
-                        <img src="./imgs/kenya/.jpg"/>
+                        <img src={require('../../assets/imgs/jakarta/envir.jpg')}/>
+                        <figcaption>destruction of a village creating debris in the water. Photograph: Elly Burhaini Faizal</figcaption>
                     </ScrollAnimation>
                     </ScrollAnimation>
 

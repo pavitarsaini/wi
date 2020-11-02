@@ -40,6 +40,31 @@ img {
     margin-top: 3%;
 }
 
+button {
+    width: 100%;
+    margin-top: 3%;
+    margin-bottom: 5%;
+}
+
+.play {
+    font-family: "Lack";
+    text-decoration: none;
+    font-size: 1.5em;
+
+    text-align: center;
+
+    border: 1px solid #fff;
+    border-radius: 15px;
+    color: white;
+    background-color: transparent;
+    transition: 0.3s;
+
+}
+.play:hover {
+    background-color: white;
+    color: black;
+}
+
 #img-stack {
     width: 100%;
     grid-area: 1 / 1 / 2 / 2;
@@ -69,6 +94,16 @@ figcaption{
     margin-right: 10%;
 }
 
+.counter3 {
+    text-align: center;
+    float: left;
+    margin: 4% auto;
+    font-family: "Lack";
+    font-size: 3.5em;
+    color: #d35400;
+    margin-right: 5%;
+}
+
 .counter2 {
     text-align: center;
     margin: 4% auto;
@@ -94,7 +129,7 @@ figcaption{
 }
 
 #paragraph-califorina a {
-    background: linear-gradient(180deg, rgba(255,255,255,0) 65%#2980b9 65%);
+    background: linear-gradient(180deg, rgba(255,255,255,0) 65%,#d35400 65%);
     border-bottom: none !important;
 }
 
@@ -112,7 +147,7 @@ figcaption{
     margin-bottom: 2%;
 }
 
-#paragraph-califorina{
+#paragraph-califorina {
     color: white;
     font-family: "Lack";
     font-size: 1.2em;
@@ -126,6 +161,11 @@ figcaption{
 
 #title-jakarta {
     font-size: 3.6em;
+    font-family: "Grotesk";
+}
+
+#title-califorina {
+    font-size: 3.7em;
     font-family: "Grotesk";
 }
 
