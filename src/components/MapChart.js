@@ -1,32 +1,36 @@
-import React, { Component, useRef, useState, useEffect, useCallback } from "react";
+import React, { Component} from "react";
 import {
   ComposableMap,
   ZoomableGroup,
   Geographies,
   Geography
 } from "react-simple-maps";
-import { useTransition, useTrail, animated as a } from "react-spring";
 import "../assets/stylesheets/MapChart/MapChart.css"
 
 import KanyaIntro from "./MapCountries/KenyaIntro"
 import IDNIntro from "./MapCountries/IDNIntro"
 import CaliIntro from "./MapCountries/CaliIntro"
+import BrazilIntro from "./MapCountries/BrazilIntro"
+import AtlanticIntro from "./MapCountries/AtlanticIntro"
 
 const ZOOM = 0.85;
 const CENTER = [13, -33]; 
-const geoPaths = ["./mapdata/world.json", "./mapdata/kenya.json", "./mapdata/idn.json", "./mapdata/cali.json"];
+const geoPaths = ["./mapdata/world.json", "./mapdata/kenya.json", "./mapdata/idn.json", "./mapdata/cali.json", "./mapdata/atlantic.json", "./mapdata/brazil.json"];
 
 var countriesList = [
   { name: 'KEN', center: [48.084867983159704, -3.282589099070572], zoom: 8, path: geoPaths[1] },
   { name: 'IDN', center: [151.25483468761988, -15.26125385186716], zoom: 2.378414230005443, path: geoPaths[2] },
-  { name: 'USA', center: [-105.66381951282006, 33.150487064940826], zoom: 8, path: geoPaths[3] }
+  { name: 'USA', center: [-105.66381951282006, 33.150487064940826], zoom: 8, path: geoPaths[3] },
+  { name: 'CAN', center: [-45.72607712940721, 45.89266728625843], zoom: 6.727171322029718, path: geoPaths[4] },
+  { name: 'BRA', center: [-19.44438681578761, -26.426482730216705], zoom: 2.4041630560342613, path: geoPaths[5] }
 ];
 
 const highlighted = [
   "KEN",
   "CAN",
   "IDN",
-  "USA"
+  "USA",
+  "BRA"
 ];
 
 class MapChart extends Component {
@@ -127,7 +131,7 @@ getCountryInfo(uid) {
               
             </ComposableMap>
             {
-       this.state.paths == geoPaths[0] &&
+       this.state.paths === geoPaths[0] &&
             <div className="controls">
             <button className="btn" onClick={this.centerMap()}>
               Center
@@ -135,16 +139,24 @@ getCountryInfo(uid) {
           </div>
           }
           {
-       this.state.paths == geoPaths[1] &&
+       this.state.paths === geoPaths[1] &&
            <div className="controls2"><KanyaIntro data={this.state}/></div>
           }
           {
-       this.state.paths == geoPaths[2] &&
+       this.state.paths === geoPaths[2] &&
            <div className="controls2"><IDNIntro data={this.state}/></div>
           }
           {
-       this.state.paths == geoPaths[3] &&
+       this.state.paths === geoPaths[3] &&
            <div className="controls2"><CaliIntro data={this.state}/></div>
+          }
+          {
+       this.state.paths === geoPaths[4] &&
+           <div className="controls2"><AtlanticIntro data={this.state}/></div>
+          }
+          {
+       this.state.paths === geoPaths[5] &&
+           <div className="controls2"><BrazilIntro data={this.state}/></div>
           }
       </div>
     );

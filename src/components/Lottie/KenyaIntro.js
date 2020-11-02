@@ -7,12 +7,12 @@ preserveAspectRatio:  'xMinYMin slice',
 }
 
 function  KanyaIntro() {
-const [playingState, setPlayingState] = useState('play')
-const [autoplay, setAutoplay] = useState(true)
-const [loop, setLoop] = useState(false)
-const [animationData, setAnimationData] = useState(animationFile)
-const [speed, setSpeed] = useState(1)
-const [direction, setDirection] = useState(1)
+const [playingState] = useState('play')
+const [autoplay] = useState(true)
+const [loop] = useState(false)
+const [animationData] = useState(animationFile)
+const [speed] = useState(1)
+const [direction] = useState(1)
 return (
 <Lottie
 options={{

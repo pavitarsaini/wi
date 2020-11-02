@@ -1,10 +1,9 @@
-import React, {Component, useRef, useState, useEffect, useCallback} from "react";
+import React, {Component} from "react";
 
 import CountUp from 'react-countup';
 
 import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.min.css";
-import ReactTooltip from "react-tooltip";
 
 import "../../assets/stylesheets/CountryPages/KenyaPage.css"
 import "../../assets/stylesheets/CountryPages/Common.css"

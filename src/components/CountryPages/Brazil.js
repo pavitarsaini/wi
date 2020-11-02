@@ -8,25 +8,15 @@ import "../../assets/stylesheets/CountryPages/KenyaPage.css"
 import "../../assets/stylesheets/CountryPages/Common.css"
 import "../../assets/stylesheets/CountryPages/ToolTips.css"
 
-class Jakarta extends Component {
-
-    constructor() {
-        super();
-      this.state = {
-        didViewCountUp: false
-      };
-      this.test = this.test.bind(this)
-        
-    }  
-
-    test(visible) {
-        this.setState({ didViewCountUp: true });
-        this.refs.vidRef.play();
-    }
+class Brazil extends Component {
 
     componentWillMount() {
         document.body.id = 'style-2';
     }
+
+    playVideo() {
+        this.refs.vidRef.play();
+      }
 
     render() {
         return (
@@ -34,7 +24,7 @@ class Jakarta extends Component {
 
             <div id="outer">
                 <div id="inner">
-                <ScrollAnimation animateOnce animateIn="animate__fadeInDown"><div id="title-jakarta">Jakarta Sea Level Rise</div></ScrollAnimation>
+                <ScrollAnimation animateOnce animateIn="animate__fadeInDown"><div id="title-jakarta">Amazon Species Extinction</div></ScrollAnimation>
 
                 </div>
             </div>
@@ -58,13 +48,13 @@ class Jakarta extends Component {
                     <ReactTooltip id="registerTip" place="right" effect="solid">
                     a gradual settling or sudden sinking of the Earth's surface due to removal or displacement of subsurface earth materials
       </ReactTooltip>
-                    <ScrollAnimation afterAnimatedIn={this.test} animateOnce animateIn="animate__fadeInUp">
-                    <video id="my-video" ref="vidRef" muted="muted" loop>
+                    <ScrollAnimation animateOnce animateIn="animate__fadeInUp">
+                    <video ref="vidRef" loop>
                     <source src={require('../../assets/videos/sinking.webm')} type="video/webm"/>
                     Your browser does not support the video tag.
                 </video>
 
-                <div className="play" >Jakarta Sinking Over Time</div>
+                <button className="play" onClick={this.playVideo.bind(this)}>PLAY</button>
 
                         
                     </ScrollAnimation>
@@ -165,4 +155,4 @@ class Jakarta extends Component {
     }
 }
 
-export default Jakarta;
+export default Brazil;

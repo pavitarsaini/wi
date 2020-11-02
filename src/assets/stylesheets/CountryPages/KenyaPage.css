@@ -24,6 +24,19 @@
     }
 }
 
+.quote {
+    display: none;
+    color: white;
+    font-size: 2em;
+    margin: 0;
+    padding: 1em;
+    border-radius: 1em;
+  }
+  .quote figcaption,
+  .quote blockquote {
+    margin: 1em;
+  }
+
 .cause {
     float: right;
 }
@@ -52,17 +65,9 @@ button {
     font-size: 1.5em;
 
     text-align: center;
-
-    border: 1px solid #fff;
-    border-radius: 15px;
     color: white;
     background-color: transparent;
-    transition: 0.3s;
-
-}
-.play:hover {
-    background-color: white;
-    color: black;
+    margin-bottom: 3%;
 }
 
 #img-stack {

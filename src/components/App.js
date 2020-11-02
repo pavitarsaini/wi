@@ -1,10 +1,13 @@
 import React, {Component} from "react";
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import {BrowserRouter as Router, Route} from "react-router-dom";
 
 import MapChart from "./MapChart";
 import Kenya from "./CountryPages/Kenya"
 import Jakarta from "./CountryPages/Jakarta"
 import Califorina from "./CountryPages/Califorina"
+import Atlantic from "./CountryPages/Atlantic"
+import Brazil from "./CountryPages/Brazil"
+
 
 class App extends Component {
     render() {
@@ -15,7 +18,9 @@ class App extends Component {
                     <Route exact path="/wi/kenya" component={Kenya}/>
                     <Route exact path="/wi/jakarta" component={Jakarta}/>
                     <Route exact path="/wi/califorina" component={Califorina}/>
-                </div>
+                    <Route exact path="/wi/atlantic" component={Atlantic}/>
+                    <Route exact path="/wi/brazil" component={Brazil}/>
+                 </div>
             </Router>
         );
     }

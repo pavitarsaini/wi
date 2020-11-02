@@ -1,11 +1,10 @@
-import React, {Component, useRef, useState, useEffect, useCallback} from "react";
-import {useTransition, useTrail, animated as a} from "react-spring";
+import React, {} from "react";
 import "../../assets/stylesheets/MapChart/Countries.css"
 import {Link} from "react-router-dom";
 
 import KenyaIntro from "../Lottie/KenyaIntro"
 
-const Kenya = (props) => {
+const Kenya = () => {
 
     return (
         <div className="trails-main">

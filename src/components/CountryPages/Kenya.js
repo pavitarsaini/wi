@@ -1,4 +1,4 @@
-import React, {Component, useRef, useState, useEffect, useCallback} from "react";
+import React, {Component} from "react";
 
 import CountUp from 'react-countup';
 import ScrollAnimation from 'react-animate-on-scroll';
@@ -8,6 +8,17 @@ import "../../assets/stylesheets/CountryPages/KenyaPage.css"
 import "../../assets/stylesheets/CountryPages/Common.css"
 
 class Kenya extends Component {
+    constructor() {
+        super();
+      this.state = {
+        didViewCountUp: false
+      };
+      this.test = this.test.bind(this)
+        
+    }  
+
+    test(visible) {this.setState({ didViewCountUp: true });}
+
 
     componentWillMount() {
         document.body.id = 'style-2';
@@ -54,10 +65,11 @@ class Kenya extends Component {
                         <div id="paragraph">Climate change is real and happening now. The past three years have been <a>the hottest ever recorded.</a> Average global temperatures are now one degree Celsius higher than pre-industrial levels, largely due to human activities. Experts have long predicted that <a>the frequency and intensity of droughts would increase as a result of climate change.</a> The increasing release of greenhouse gasses like chlorofluorocarbons(CFCs) has taken a large tool on our ozone layer, that absorbs almost all of the sun's harmful ultraviolet light. Most blame climate change for these increasing droughts, but it is evident that <a>our actions were the ones that are having the most impact.</a>
 
                         </div>
-                        </ScrollAnimation>
+                        
                         <ScrollAnimation animateOnce animateIn="animate__fadeInUp">
                             <img src={require('../../assets/imgs/kenya/drought.jpg')}/>
-                            <figcaption></figcaption>
+                            <figcaption> </figcaption>
+                        </ScrollAnimation>
                         </ScrollAnimation>
                         
 
@@ -101,10 +113,10 @@ class Kenya extends Component {
                         Crop loss also impacts consumers through increased food prices and the economic impacts of drought can be felt in other areas and even countries. For example, the drought in California that began in 2012 <a>has impacted vegetable, fruit, and nut prices in Canada</a>(Alberta WaterPortal, 2014). Lastly droughts can also hurt the recreation and tourism industry. Businesses, such as water sport rental shops, may be financially impacted during a drought.
                         </div>
 
-                        <ScrollAnimation animateOnce animateIn="animate__fadeIn">
+                        <ScrollAnimation afterAnimatedIn={this.test} animateOnce animateIn="animate__fadeIn">
 
                         <div className="counter2 fadeIn">
-                            <CountUp duration={5} end={12} prefix="$"/>
+                            <CountUp duration={5} start={0} end={this.state.didViewCountUp ? 12 : 0} prefix="$"/>
                             &#160;USD
                             <div className="counter-text fadeInDelay">lost to droughts in 3 years</div>
                     </div>
@@ -133,6 +145,16 @@ class Kenya extends Component {
                         <ScrollAnimation animateOnce animateIn="animate__fadeInUp">
                         <img src={require("./../../assets/imgs/kenya/political.jpg")}/>
                         <figcaption>a woman picks up a packet of government-subsidised maize flour. Photograph: Baz Ratner/Reuters</figcaption>
+                        </ScrollAnimation>
+
+                        <ScrollAnimation animateOnce animateIn="animate__fadeInUp">
+                        <figure class="quote">
+  <blockquote>
+    "In Kenya, accusations of mismanagement of the elections did not bring people on to the street, but high food prices did"
+  </blockquote>
+  <figcaption>
+    &mdash; Kristof Titeca, <cite>University of Antwerp in Belgium</cite>  </figcaption>
+</figure>
                         </ScrollAnimation>
                     </ScrollAnimation>
 

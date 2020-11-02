@@ -1,5 +1,4 @@
-import React, {Component, useRef, useState, useEffect, useCallback} from "react";
-import {useTransition, useTrail, animated as a} from "react-spring";
+import React, {Component} from "react";
 import "../../assets/stylesheets//MapChart/Countries.css"
 import "../../assets/stylesheets//MapChart/IDNIntro.css"
 import {Link} from "react-router-dom";
