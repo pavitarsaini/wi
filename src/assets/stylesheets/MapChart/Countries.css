@@ -39,6 +39,27 @@
     white-space: normal;
 }
 
+.brazil-text {
+    width: 95%;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+}
+
+.help {
+    color: white;
+    font-family: "Grotesk";
+    text-decoration: none;
+
+    font-size: 7.4em;
+
+    margin-right: 10%;
+    bottom: 60%;
+    width: 44%;
+    height: 5%;
+
+}
+
 .travel {
     font-family: "Lack";
     text-decoration: none;

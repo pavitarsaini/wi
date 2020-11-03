@@ -10,13 +10,14 @@ const BrazilIntro = () => {
 
         return (
             <div className="trails-main">
-            <div className="trails-text">
-           
+                
+            <div className="brazil-text">           
 
                 <AmazonIntro/>
-                <Link to='/wi/kenya' className="travel fadeIn">travel</Link>
-
+                <Link to='/wi/brazil' className="travel fadeIn">travel</Link>
+                
             </div>
+            
 
         </div>
         );
