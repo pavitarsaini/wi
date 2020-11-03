@@ -11,6 +11,10 @@
     src: url("../../fonts/Lack/Lack-Regular.otf");
 }
 
+#hey{
+    width: 100%;
+}
+
 .trails-main {
     top: 7%;
     left: 40%;

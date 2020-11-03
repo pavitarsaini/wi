@@ -19,7 +19,7 @@ class Califorina extends Component {
         
     }  
 
-    componentWillMount() {
+    componentDidMount() {
         document.body.id = 'style-2';
     }
 
@@ -108,7 +108,7 @@ class Califorina extends Component {
 </div>
 
                     <ScrollAnimation animateOnce animateIn="animate__fadeInUp">
-                        <img src={require('../../assets/imgs/cali/envir.webp')} type/>
+                        <img src={require('../../assets/imgs/cali/envir.webp')}/>
                         <figcaption>People stop to take morning pictures of the Golden Gate Bridge covered in smoke from wildfires on September 9. Photograph: Eric Risberg/AP</figcaption>
                     </ScrollAnimation>
                     </ScrollAnimation>

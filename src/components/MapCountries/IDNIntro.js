@@ -13,7 +13,7 @@ class IDNIntro extends Component {
                     Sea level rise
 
                 </div>
-                <Link to='wi/jakarta' className="IDNtravel fadeInSlow">travel</Link>
+                <Link to='/wi/jakarta' className="IDNtravel fadeInSlow">travel</Link>
             </div>
         );
     }

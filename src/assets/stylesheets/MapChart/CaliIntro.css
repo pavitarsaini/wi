@@ -60,6 +60,28 @@
 
 }
 
+.help2 {
+    color: white;
+    font-family: "Grotesk";
+    text-decoration: none;
+
+    font-size: 7em;
+
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    left: 0%;
+    right: 0;
+    bottom: 60%;
+    width: 44%;
+    height: 5%;
+
+}
+
 .CALItravel {
     font-family: "Lack";
     text-decoration: none;

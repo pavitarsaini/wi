@@ -13,7 +13,7 @@ class AtlanticIntro extends Component {
                 <div className="tittle fadeIn">Atlantic</div>
                 <div id="texte">
                     <span id="L">H</span>
-                    <span id="I">A</span>
+                    <span id="I">U</span>
                     <span id="G">R</span>
                     <span id="H">R</span>
                     <span id="T">I</span>

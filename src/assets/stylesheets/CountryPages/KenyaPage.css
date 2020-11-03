@@ -175,6 +175,7 @@ figcaption{
 }
 
 #heading {
+    text-transform: capitalize;
     color: white;
     font-size: 2em;
     font-family: "Commissioner";

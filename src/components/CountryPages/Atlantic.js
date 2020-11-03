@@ -10,6 +10,20 @@ import "../../assets/stylesheets/CountryPages/ToolTips.css"
 
 class Atlantic extends Component {
 
+    constructor() {
+        super();
+      this.state = {
+        didViewCountUp: false
+      };
+      this.test = this.test.bind(this)
+        
+    }  
+
+    test(visible) {
+        this.setState({ didViewCountUp: true });
+        this.refs.vidRef.play();
+    }
+
     componentWillMount() {
         document.body.id = 'style-2';
     }
@@ -31,7 +45,7 @@ class Atlantic extends Component {
             <div id="cont">
             <ScrollAnimation animateOnce animateIn="animate__fadeIn">
                 <div id="heading">the problem</div>
-                <div id="paragraph-jakarta">IThe intensity, frequency and duration of North Atlantic hurricanes, as well as the frequency of the strongest hurricanes, have all increased since the early 1980s. The relative contributions of human and natural causes to these increases are still uncertain. Hurricane-associated storm intensity and rainfall rates are projected to increase as the climate continues to warm. These new Hurricanes have caused immense damage to communities and the environment. 
+                <div id="paragraph-jakarta">The intensity, frequency and duration of North Atlantic hurricanes, as well as the frequency of the strongest hurricanes, have all increased since the early 1980s. The relative contributions of human and natural causes to these increases are still uncertain. Hurricane-associated storm intensity and rainfall rates are projected to increase as the climate continues to warm. These new Hurricanes have caused immense damage to communities and the environment. 
 </div>          <ScrollAnimation animateOnce animateIn="animate__fadeInUp">
                         <img src={require('../../assets/imgs/atlantic/problem.png')}/>
                         <figcaption></figcaption>
@@ -46,11 +60,12 @@ class Atlantic extends Component {
 
                     </div>
                    
-                    <ScrollAnimation animateOnce animateIn="animate__fadeInUp">
-                    <video ref="vidRef" loop>
-                    <source src={require('../../assets/videos/sinking.webm')} type="video/webm"/>
+                    <ScrollAnimation afterAnimatedIn={this.test} animateOnce animateIn="animate__fadeInUp">
+                    <video id="my-video" ref="vidRef" muted="muted">
+                    <source src={require('../../assets/videos/atlantic-graph.webm')} type="video/webm"/>
                     Your browser does not support the video tag.
                 </video>
+                <div className="play" >Increasing tempture and power of Hurricanes</div>
 
 
                         
@@ -74,8 +89,8 @@ class Atlantic extends Component {
                   
 
                     <ScrollAnimation animateOnce animateIn="animate__fadeInUp">
-                        <img src={require('../../assets/imgs/jakarta/political.jpg')}/>
-                        <figcaption>Akuarium kampung, one of the informal developments that are blamed for worsening flooding. Photograph: Josh Haner/The New York Times</figcaption>
+                        <img src={require('../../assets/imgs/atlantic/social.jpg')}/>
+                        <figcaption>People wait to be rescued from their flooded homes after the area was inundated with flooding from a Hurricane. Photograph: Joe Raedle</figcaption>
                         
                     </ScrollAnimation>
                     </ScrollAnimation>
@@ -86,11 +101,9 @@ class Atlantic extends Component {
                     <div id="heading">economic impacts</div>
                     <div id="paragraph-jakarta">Hurricanes are among the most damaging of natural disasters. A category 4 or 5 storm can reduce U.S. economic production and increase unemployment. Large hurricanes depress the stock market and other financial markets. Even a Category 1 Hurricane can devastate the economy. For example, Hurricane Igor wreaked havoc on Newfoundland and caused $200 million in damages(Dangerfield, 2017). These figures only include direct damages and not the indirect costs. A Hurricane puts all work to stop, fishing which is one of Newfoundland's biggest industries can be put on hold for up to a week with heavy damages to equipment.
 </div>
-                    
-
-                    <ScrollAnimation id="stacker" animateOnce animateIn="animate__fadeInUp">
-                        <img id="img-stack" src={require('../../assets/imgs/jakarta/eco.jpg')}/>
-                        <figcaption>boy walking on top of the Jakarta's giant sea wall. Photograph: ED WRAY/GETTY IMAGES</figcaption>
+                <ScrollAnimation animateOnce animateIn="animate__fadeInUp">
+                        <img src={require('../../assets/imgs/atlantic/eco.webp')}/>
+                        <figcaption>Hurricane Igor and the havoc the storm wreaked. Photograph: Unknown</figcaption>
                         
                     </ScrollAnimation>
                 </ScrollAnimation>
@@ -102,10 +115,7 @@ class Atlantic extends Component {
                     </div>
                     
 
-                    <ScrollAnimation animateOnce animateIn="animate__fadeInUp">
-                        <img src={require('../../assets/imgs/jakarta/envir.jpg')}/>
-                        <figcaption>destruction of a village creating debris in the water. Photograph: Elly Burhaini Faizal</figcaption>
-                    </ScrollAnimation>
+                    
                     </ScrollAnimation>
 
                      <ScrollAnimation className="cause" animateOnce animateIn="animate__fadeIn">
@@ -115,10 +125,7 @@ class Atlantic extends Component {
 </div>
                     
 
-                    <ScrollAnimation animateOnce animateIn="animate__fadeInUp">
-                        <img src={require('../../assets/imgs/jakarta/envir.jpg')}/>
-                        <figcaption>destruction of a village creating debris in the water. Photograph: Elly Burhaini Faizal</figcaption>
-                    </ScrollAnimation>
+                    
                     </ScrollAnimation>
 
 
@@ -132,8 +139,7 @@ class Atlantic extends Component {
                     <div id="paragraph-jakarta">A more international solution is to slow down the rate of the warming waters, by capping carbon emissions. The Paris Agreement aims to do just that, by setting guidelines and goals for parties to meet. If all parties meet their carbon emission goals, the temperature will not increase more than 1.5 degrees. Although the Paris agreement is trying to stop the temperatures from rising too high, the current increase in temperature is going to affect millions of lives. With no way to cool the earth, hurricanes will become more frequent and deadly. 
 </div>
                         <ScrollAnimation animateOnce animateIn="animate__fadeInUp">
-                        <img src={require('../../assets/imgs/jakarta/tired.jpg')}/>
-                        <figcaption>Meeting of various world leaders during the 2015 UN climate change conference that resulted in the Paris Agreement. Photograph: Guillaume Horcajuelo</figcaption>
+                        <img src={require('../../assets/imgs/atlantic/tried.png')}/>
                         
                     </ScrollAnimation>
                     </ScrollAnimation>
@@ -149,8 +155,8 @@ class Atlantic extends Component {
                     <div id="paragraph-jakarta">At a political standpoint, the effects of the only solution is to give attention to small communities. Even though Atlantic Canada is not hit with the most powerful hurricanes, we must work to design communities to be prepared to tackle them. This class for tougher regulations and codes for building houses in the Atlantic. As we begin to settle more and more land, we increase our carbon emission and it is evident that Hurricanes are only getting stronger. If we spend millions on a proper and protected house, we can not only save lives but also save billions in damages in the future. If we do not work now, it may be too late to fix our mistakes in the future.
 </div>
 <ScrollAnimation animateOnce animateIn="animate__fadeInUp">
-                        <img src={require('../../assets/imgs/jakarta/solution.jpg')}/>
-                        <figcaption>Centennial Park incorporates various anti-flooding features. Photograph: Courtesy Landprocess</figcaption>
+                        <img src={require('../../assets/imgs/atlantic/solution.jpg')}/>
+                        <figcaption>This house plan was created for social charity ORLI’s Global Design Ideas Competition, aimed at helping neighbourhoods affected by Hurricanes</figcaption>
                         
                     </ScrollAnimation>
                 </ScrollAnimation>
