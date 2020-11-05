@@ -13,6 +13,13 @@
         width: 52%;
         height: 5%;
     }
+
+    .China {
+        right: 6%;
+        bottom: 31%;
+        width: 48%;
+        height: 5%;
+    }
 }
 
 /* For Tablets */
@@ -28,6 +35,15 @@
         width: 44%;
         height: 5%;
     }
+
+    .China {
+        right: 6%;
+        bottom: 31%;
+        width: 47.5%;
+        height: 5%;
+    }
+
+    
 }
 
 .video {
@@ -35,6 +51,15 @@
     left: 35%;
     right: 0;
     bottom: 0;
+    display: block;
+}
+
+.video2 {
+    width: 50%;
+    position: absolute;
+    left: 45%;
+    right: 0;
+    bottom: 35%;
     display: block;
 }
 
@@ -82,6 +107,28 @@
 
 }
 
+.help3 {
+    color: white;
+    font-family: "Grotesk";
+    text-decoration: none;
+
+    font-size: 10em;
+
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    left: 45%;
+    right: 0;
+    bottom: 60%;
+    width: 50%;
+    height: 5%;
+
+}
+
 .CALItravel {
     font-family: "Lack";
     text-decoration: none;
@@ -100,6 +147,28 @@
     transition: 0.3s;
 }
 .CALItravel:hover {
+    background-color: white;
+    color: black;
+}
+
+.China {
+    font-family: "Lack";
+    text-decoration: none;
+
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    border: 1px solid #fff;
+    border-radius: 15px;
+    color: white;
+    background-color: transparent;
+    transition: 0.3s;
+}
+.China:hover {
     background-color: white;
     color: black;
 }

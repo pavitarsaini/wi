@@ -7,7 +7,8 @@ import Jakarta from "./CountryPages/Jakarta"
 import Califorina from "./CountryPages/Califorina"
 import Atlantic from "./CountryPages/Atlantic"
 import Brazil from "./CountryPages/Brazil"
-
+import China from "./CountryPages/China"
+import references from "./References"
 
 class App extends Component {
     render() {
@@ -20,6 +21,8 @@ class App extends Component {
                     <Route exact path="/wi/califorina" component={Califorina}/>
                     <Route exact path="/wi/atlantic" component={Atlantic}/>
                     <Route exact path="/wi/brazil" component={Brazil}/>
+                    <Route exact path="/wi/china" component={China}/>
+                    <Route exact path="/wi/references" component={references}/>
                  </div>
             </Router>
         );

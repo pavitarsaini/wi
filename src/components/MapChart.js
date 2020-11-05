@@ -6,23 +6,26 @@ import {
   Geography
 } from "react-simple-maps";
 import "../assets/stylesheets/MapChart/MapChart.css"
+import {Link} from "react-router-dom";
 
 import KanyaIntro from "./MapCountries/KenyaIntro"
 import IDNIntro from "./MapCountries/IDNIntro"
 import CaliIntro from "./MapCountries/CaliIntro"
 import BrazilIntro from "./MapCountries/BrazilIntro"
 import AtlanticIntro from "./MapCountries/AtlanticIntro"
+import ChinaIntro from "./MapCountries/ChinaIntro"
 
 const ZOOM = 0.85;
 const CENTER = [13, -33]; 
-const geoPaths = ["./mapdata/world.json", "./mapdata/kenya.json", "./mapdata/idn.json", "./mapdata/cali.json", "./mapdata/atlantic.json", "./mapdata/brazil.json"];
+const geoPaths = ["./mapdata/world.json", "./mapdata/kenya.json", "./mapdata/idn.json", "./mapdata/cali.json", "./mapdata/atlantic.json", "./mapdata/brazil.json", "./mapdata/china.json"];
 
 var countriesList = [
   { name: 'KEN', center: [48.084867983159704, -3.282589099070572], zoom: 8, path: geoPaths[1] },
   { name: 'IDN', center: [151.25483468761988, -15.26125385186716], zoom: 2.378414230005443, path: geoPaths[2] },
   { name: 'USA', center: [-105.66381951282006, 33.150487064940826], zoom: 8, path: geoPaths[3] },
   { name: 'CAN', center: [-45.72607712940721, 45.89266728625843], zoom: 6.727171322029718, path: geoPaths[4] },
-  { name: 'BRA', center: [-19.44438681578761, -26.426482730216705], zoom: 2.4041630560342613, path: geoPaths[5] }
+  { name: 'BRA', center: [-19.44438681578761, -26.426482730216705], zoom: 2.4041630560342613, path: geoPaths[5] },
+  { name: 'CHN', center: [128.21565326847065, 21.818627562100048], zoom: 2.4041630560342617, path: geoPaths[6] }
 ];
 
 const highlighted = [
@@ -30,7 +33,8 @@ const highlighted = [
   "CAN",
   "IDN",
   "USA",
-  "BRA"
+  "BRA",
+  "CHN"
 ];
 
 class MapChart extends Component {
@@ -114,6 +118,7 @@ getCountryInfo(uid) {
                           },
                           hover: {
                             //opacity:0.8,
+                            transition: "0.3s",
                             fill: "#F53",
                             outline: "none"
                           },
@@ -133,13 +138,14 @@ getCountryInfo(uid) {
             {
        this.state.paths === geoPaths[0] &&
             <div className="controls">
-            <button className="btn" onClick={this.centerMap()}>
-              Center
-            </button>
+             <Link to='/wi/references' className="travel0" onClick={this.centerMap()}>
+             References
+            </Link>
           </div>
           }
           {
        this.state.paths === geoPaths[1] &&
+       
            <div className="controls2"><KanyaIntro data={this.state}/></div>
           }
           {
@@ -157,6 +163,10 @@ getCountryInfo(uid) {
           {
        this.state.paths === geoPaths[5] &&
            <div className="controls2"><BrazilIntro data={this.state}/></div>
+          }
+          {
+       this.state.paths === geoPaths[6] &&
+           <div className="controls2"><ChinaIntro data={this.state}/></div>
           }
       </div>
     );

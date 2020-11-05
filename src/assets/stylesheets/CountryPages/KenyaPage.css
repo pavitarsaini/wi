@@ -179,6 +179,11 @@ figcaption{
     font-family: "Grotesk";
 }
 
+#title-china {
+    font-size: 3.3em;
+    font-family: "Grotesk";
+}
+
 #heading {
     text-transform: capitalize;
     color: white;
