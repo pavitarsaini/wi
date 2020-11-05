@@ -14,6 +14,8 @@ import CaliIntro from "./MapCountries/CaliIntro"
 import BrazilIntro from "./MapCountries/BrazilIntro"
 import AtlanticIntro from "./MapCountries/AtlanticIntro"
 import ChinaIntro from "./MapCountries/ChinaIntro"
+import Kenya from "./MapCountries/KenyaIntro";
+import Landing from "./Landing"
 
 const ZOOM = 0.85;
 const CENTER = [13, -33]; 
@@ -46,14 +48,30 @@ class MapChart extends Component {
     center: CENTER,
     zoom: ZOOM,
     bypass: false,
+    isLoading: true,
   };
-  
+    this.land = React.createRef(); 
     this.centerMap = this.centerMap.bind(this)
     this.handleMoveEnd = this.handleMoveEnd.bind(this)
 }  
 
-componentDidMount () {
+
+
+componentDidMount() {
   document.body.id = 'MAIN';
+  setTimeout(() => {
+    this.setState({
+      isLoading: false
+  })
+}, 2000);
+}
+
+test() {
+  setTimeout(() => {
+      this.setState({
+      clicked: false
+    })
+  }, 2500);
 }
 
 getCountryInfo(uid) {
@@ -94,7 +112,9 @@ getCountryInfo(uid) {
 
   render() {
     return (
-      <div className="MAIN">
+      this.state.isLoading ? <Landing/>
+  
+  : <div className="MAIN">
             <ComposableMap style={{ width: "100%", height: "100%" }} >
               <ZoomableGroup 
             onMoveEnd={this.handleMoveEnd} className={"test"} center={this.state.center} zoom={this.state.zoom}>
@@ -110,8 +130,9 @@ getCountryInfo(uid) {
                         key={geo.rsmKey}
                         geography={geo}
                         projection={projection}
-                        onClick={this.handleGeographyClick(geo, projection, path)}
+                        //onClick={this.handleGeographyClick(geo, projection, path)}
                         fill={isHighlighted ? "#82FF9E" : "#fff"}
+                        onClick={isHighlighted || this.state.paths !== geoPaths[0]? this.handleGeographyClick(geo, projection, path) : null}
                         style={{
                           default: {
                             outline: "none"
@@ -120,6 +141,34 @@ getCountryInfo(uid) {
                             //opacity:0.8,
                             transition: "0.3s",
                             fill: "#F53",
+                            outline: "none"
+                          },
+                          pressed: {
+                            fill: "#E42",
+                            outline: "none"
+                          }
+                        }}
+
+                        style={isHighlighted || this.state.paths !== geoPaths[0]? {
+                          default: {
+                            outline: "none"
+                          },
+                          hover: {
+                            transition: "0.3s",
+                            fill: "#F53",
+                            outline: "none"
+                          },
+                          pressed: {
+                            fill: "#E42",
+                            outline: "none"
+                          }
+                        } : {
+                          default: {
+                            outline: "none"
+                          },
+                          hover: {
+                            transition: "0.3s",
+                            fill: "#fff",
                             outline: "none"
                           },
                           pressed: {
@@ -140,6 +189,9 @@ getCountryInfo(uid) {
             <div className="controls">
              <Link to='/wi/references' className="travel0" onClick={this.centerMap()}>
              References
+            </Link>
+            <Link to='/wi/about' className="traveler" onClick={this.centerMap()}>
+             About
             </Link>
           </div>
           }
