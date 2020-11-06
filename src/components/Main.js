@@ -26,7 +26,7 @@ class Main extends Component {
           this.state.isLoading ? <div className="titl">
           Climate Change
       </div> :
-          <Redirect to={{pathname: "/wi"}}/> 
+      <Redirect to="/wi/map"/>
     );
 }
 }

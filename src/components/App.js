@@ -18,9 +18,9 @@ class App extends Component {
         return (
             <Router>
                 <div>
-                    <Route exact path="/wi" component={MapChart}/>
+                    <Route exact path="/wi" component={Main}/>
                     <Route exact path="/wi/landing" component={Landing}/>
-                    <Route exact path="/wi/main" component={Main}/>
+                    <Route exact path="/wi/map" component={MapChart}/>
                     <Route exact path="/wi/kenya" component={Kenya}/>
                     <Route exact path="/wi/jakarta" component={Jakarta}/>
                     <Route exact path="/wi/califorina" component={Califorina}/>

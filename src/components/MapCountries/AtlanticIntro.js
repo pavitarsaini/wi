@@ -23,7 +23,7 @@ class AtlanticIntro extends Component {
                     <span id="T">E</span>
                     <span id="T">S</span>
                 </div>
-                <Link to='wi/atlantic' className="BRAtravel fadeIn">travel</Link>
+                <Link to='/wi/atlantic' className="BRAtravel fadeIn">travel</Link>
             </div>
         );
     }

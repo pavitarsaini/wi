@@ -19,7 +19,7 @@ import Landing from "./Landing"
 
 const ZOOM = 0.85;
 const CENTER = [13, -33]; 
-const geoPaths = ["./mapdata/world.json", "./mapdata/kenya.json", "./mapdata/idn.json", "./mapdata/cali.json", "./mapdata/atlantic.json", "./mapdata/brazil.json", "./mapdata/china.json"];
+const geoPaths = [require('../assets/mapdata/world.json'), require('../assets/mapdata/kenya.json'), require('../assets/mapdata/idn.json'), require('../assets/mapdata/cali.json'), require('../assets/mapdata/atlantic.json'), require('../assets/mapdata/brazil.json'), require('../assets/mapdata/china.json'),];
 
 var countriesList = [
   { name: 'KEN', center: [48.084867983159704, -3.282589099070572], zoom: 8, path: geoPaths[1] },
