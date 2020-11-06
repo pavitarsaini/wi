@@ -184,6 +184,27 @@ figcaption{
     font-family: "Grotesk";
 }
 
+#title-about {
+    font-size: 5em;
+    font-family: "Grotesk";
+}
+
+#heading-about {
+    text-transform: capitalize;
+    color: white;
+    font-size: 2em;
+    font-family: "Commissioner";
+    margin-bottom: 3%;
+}
+
+#heading-about2 {
+    text-transform: capitalize;
+    color: white;
+    font-size: 1em;
+    font-family: "Lack";
+    margin-bottom: 3%;
+}
+
 #heading {
     text-transform: capitalize;
     color: white;

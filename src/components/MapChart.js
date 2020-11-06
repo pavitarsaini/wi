@@ -48,7 +48,6 @@ class MapChart extends Component {
     center: CENTER,
     zoom: ZOOM,
     bypass: false,
-    isLoading: true,
   };
     this.land = React.createRef(); 
     this.centerMap = this.centerMap.bind(this)
@@ -59,20 +58,9 @@ class MapChart extends Component {
 
 componentDidMount() {
   document.body.id = 'MAIN';
-  setTimeout(() => {
-    this.setState({
-      isLoading: false
-  })
-}, 2000);
+
 }
 
-test() {
-  setTimeout(() => {
-      this.setState({
-      clicked: false
-    })
-  }, 2500);
-}
 
 getCountryInfo(uid) {
     var countries = countriesList.filter(function(country) {
@@ -112,9 +100,7 @@ getCountryInfo(uid) {
 
   render() {
     return (
-      this.state.isLoading ? <Landing/>
-  
-  : <div className="MAIN">
+  <div className="MAIN">
             <ComposableMap style={{ width: "100%", height: "100%" }} >
               <ZoomableGroup 
             onMoveEnd={this.handleMoveEnd} className={"test"} center={this.state.center} zoom={this.state.zoom}>

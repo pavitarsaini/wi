@@ -1,12 +1,14 @@
-import React from 'react';
+import React, {Component} from "react";
 import '../assets/stylesheets/Landing.css';
 
-function Landing() {
-    return (
+class Landing extends Component {
+    render() {
+        return (
         <div className="titl">
         Climate Change
     </div>
     );
+}
 }
 
 export default Landing;
