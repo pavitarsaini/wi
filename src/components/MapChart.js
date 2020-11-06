@@ -87,7 +87,7 @@ getCountryInfo(uid) {
       zoom: detail ? ZOOM : zoom,
       detail: !detail
     });
-    console.log(geography)
+    //console.log(geography)
   };
 
   centerMap = () => () => {
@@ -95,7 +95,7 @@ getCountryInfo(uid) {
   }
 
   handleMoveEnd(newCenter) {
-    console.log(newCenter)
+    //console.log(newCenter)
     this.setState({ center: newCenter.coordinates,zoom: newCenter.zoom})}
 
   render() {
